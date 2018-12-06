@@ -32,7 +32,7 @@ class UserProfileManager(BaseUserManager):
 
         user.save(using=self._db)
 
-class Userprofile(AbstractBaseUser, PermissionsMixin):
+class UserProfile(AbstractBaseUser, PermissionsMixin):
     """represent a user profile inside our system."""
 
     email = models.EmailField(max_length=255, unique=True)
